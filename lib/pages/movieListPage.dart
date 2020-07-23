@@ -11,9 +11,9 @@ class MovieListPage extends StatefulWidget {
 class _MovieListPageState extends State<MovieListPage> {
   final TextEditingController _controller = TextEditingController();
   bool loading = true;
+
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
