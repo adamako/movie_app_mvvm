@@ -4,10 +4,7 @@ on:
   push:
     branches: [ master ]
     tags:
-    - '*'
-  pull_request:
-    branches: [ master ]
-
+    - 'v1.0'
 jobs:
   build:
     name: Build apk
@@ -29,4 +26,4 @@ jobs:
           token: ${{secrets.WORKFLOW}}
     - run: flutter pub get
     - run: flutter test
-    - run: flutter build apk  
+    - run: flutter build apk --debug --split-per-abi
