@@ -25,7 +25,7 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
           artifacts: "build/app/outputs/apk/debug/*.apk"
-          token: ${{ secrets.TOKEN }}
+          token: ${{secrets.WORKFLOW}}
     - run: flutter pub get
     - run: flutter test
     - run: flutter build apk  
