@@ -1,11 +1,9 @@
 name: Test, Build and Release apk
 
 on:
-  //To trigger our workflow when someone pushes the code to our repo
   push:
     branches: [ master ]
 
-  //To trigger our workflow when someone make a pull request  to our repo
   pull_request:
     branches: [ master ]
 
