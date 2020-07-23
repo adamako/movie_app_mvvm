@@ -18,13 +18,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: adamako/movie_app_mvvm
-        with:
+    - uses: adamako/movie_app_mvvm@v1
+      with:
           flutter-version: '1.7.8+hotfix.4'
     - run: flutter build apk --debug --split-per-abi
     - name: Create a Release APK
       uses: ncipollo/release-action@v1
-        with:
+      with:
           artifacts: "build/app/outputs/apk/debug/*.apk"
           token: ${{ secrets.TOKEN }}
     - run: pub get
