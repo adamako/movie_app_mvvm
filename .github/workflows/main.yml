@@ -19,7 +19,6 @@ jobs:
         flutter-version: '1.9.1+hotfix.6'
     - name: Create a Release APK
       uses: actions/upload-artifact@v2
-      if: failure()
       with:
         name: release-apk
         path: build/app/outputs/apk/debug/*.apk
