@@ -17,8 +17,6 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
         flutter-version: '1.9.1+hotfix.6'
-    - run: flutter format --set-exit-if-changed .
-    - run: flutter analyze .
     - name: Create a Release APK
       uses: actions/upload-artifact@v1
       with:
