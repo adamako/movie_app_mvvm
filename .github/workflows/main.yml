@@ -17,11 +17,12 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
         flutter-version: '1.9.1+hotfix.6'
+    - run: flutter pub get
+    - run: flutter test
     - name: Create a Release APK
-      uses: actions/upload-artifact@v2
+      run: flutter build apk --debug --split-per-abi
+    - uses: actions/upload-artifact@v2
       with:
         name: release-apk
         path: build/app/outputs/apk/debug/*.apk
-    - run: flutter pub get
-    - run: flutter test
-    - run: flutter build apk --debug --split-per-abi
+    
